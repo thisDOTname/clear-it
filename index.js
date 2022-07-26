@@ -17,13 +17,6 @@ app.command("/clean", async ({ command, ack, say, client }) => {
     try {
       await ack();
       let txt = command.text // The inputted parameters
-      console.log('/n> txt : ', txt)
-      // say("Hello world")
-      /* if(isNaN(txt)) {
-          say(txt + " is not a number")
-      } else {
-          say(txt + " squared = " + (parseFloat(txt) * parseFloat(txt)))
-      } */
       // Store conversation history
         let conversationHistory;
         // ID of channel you watch to fetch the history for
@@ -37,12 +30,7 @@ app.command("/clean", async ({ command, ack, say, client }) => {
 
         conversationHistory = result.messages;
 
-        // Print results
-        console.log(conversationHistory.length + " messages found in " + channelId);
-        // console.log('\n> conversationHistory : ', conversationHistory);
-        const historyToDelete = conversationHistory.splice(0, parseInt(txt));
-        console.log('\n> conversationHistory : ', conversationHistory);
-        console.log('\n\n> historyToDelete : ', historyToDelete);
+        conversationHistory.splice(0, parseInt(txt));
         conversationHistory.forEach(async (h) => {
             try {
                 // Call the chat.delete method using the WebClient
