@@ -7,7 +7,7 @@ console.log('> APP_TOKEN : ', typeof process.env.APP_TOKEN, process.env.APP_TOKE
 console.log('> CHANNEL_ID : ', typeof process.env.CHANNEL_ID, process.env.CHANNEL_ID);
 
 const app = new App({
-    token: "xoxp-3172215028145-3161931853348-3849362926099-76960fa7a3f2d339e371e30fdb6bf6b9", //Find in the Oauth  & Permissions tab
+    token: "xoxp-3172215028145-3161931853348-3995847437202-155a910114106c92397c50c2cbef3e6a", //Find in the Oauth  & Permissions tab
     signingSecret: "3f8391654e2e054ff2a4ff020f3bbe6e", // Find in Basic Information Tab
     socketMode:true,
     appToken: "xapp-1-A03QW37RM6Y-3837075872550-d655e7e0a2b2aef36b143d5a86f6c493fcb5835501b9e5d0ffbae8f9cc4518c4" // Token from the App-level Token that we created
