@@ -39,7 +39,6 @@ app.command("/clean", async ({ command, ack, say, client }) => {
                   ts: h.ts,
                   as_user: true
                 });
-                console.log(result);
               }
               catch (error) {
                 console.error(error);
