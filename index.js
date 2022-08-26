@@ -1,10 +1,10 @@
 const { App } = require("@slack/bolt");
 
 console.log('⚡️ Automated deployment');
-console.log('> TOKEN : ', process.env.TOKEN);
-console.log('> SIGNING_SECRET : ', process.env.SIGNING_SECRET);
-console.log('> APP_TOKEN : ', process.env.APP_TOKEN);
-console.log('> CHANNEL_ID : ', process.env.CHANNEL_ID);
+console.log('> TOKEN : ', typeof process.env.TOKEN, process.env.TOKEN);
+console.log('> SIGNING_SECRET : ', typeof process.env.SIGNING_SECRET, process.env.SIGNING_SECRET);
+console.log('> APP_TOKEN : ', typeof process.env.APP_TOKEN, process.env.APP_TOKEN);
+console.log('> CHANNEL_ID : ', typeof process.env.CHANNEL_ID, process.env.CHANNEL_ID);
 
 const app = new App({
     token: process.env.TOKEN, //Find in the Oauth  & Permissions tab
@@ -12,6 +12,8 @@ const app = new App({
     socketMode:true,
     appToken: process.env.APP_TOKEN // Token from the App-level Token that we created
 });
+
+console.log('> app : ', app);
 
 (async () => {
     await app.start();
