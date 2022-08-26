@@ -10,6 +10,7 @@ const app = new App({
 
 (async () => {
     await app.start();
+    console.log('⚡️ Automated deployment');
     console.log('⚡️ Bolt app started');
   })();
 
