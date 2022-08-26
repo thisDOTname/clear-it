@@ -1,11 +1,5 @@
 const { App } = require("@slack/bolt");
 
-console.log('⚡️ Automated deployment');
-console.log('> TOKEN : ', process.env.token);
-console.log('> signingSecret : ', process.env.signingSecret);
-console.log('> appToken : ', process.env.appToken);
-console.log('> channelId : ', process.env.channelId);
-
 const app = new App({
     token: process.env.token, //Find in the Oauth  & Permissions tab
     signingSecret: process.env.signingSecret, // Find in Basic Information Tab
