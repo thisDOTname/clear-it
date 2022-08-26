@@ -1,15 +1,16 @@
 const { App } = require("@slack/bolt");
 
 console.log('⚡️ Automated deployment');
-console.log('> TOKEN : ', 'xoxp-3172215028145-3161931853348-3995792678499-21c6797d9f9746000a06eb3841b48d7c');
-console.log('> SIGNING_SECRET : ', '3f8391654e2e054ff2a4ff020f3bbe6e');
-console.log('> APP_TOKEN : ', 'xapp-1-A03QW37RM6Y-3981340034439-eb25a64c89f4c2a85d1497e8740e0c1632aad971ff96a25422f8f5daaf0dc9df');
+console.log('> TOKEN : ', process.env.token);
+console.log('> signingSecret : ', process.env.signingSecret);
+console.log('> appToken : ', process.env.appToken);
+console.log('> channelId : ', process.env.channelId);
 
 const app = new App({
-    token: "xoxp-3172215028145-3161931853348-3995792678499-21c6797d9f9746000a06eb3841b48d7c", //Find in the Oauth  & Permissions tab
-    signingSecret: "3f8391654e2e054ff2a4ff020f3bbe6e", // Find in Basic Information Tab
+    token: process.env.token, //Find in the Oauth  & Permissions tab
+    signingSecret: process.env.signingSecret, // Find in Basic Information Tab
     socketMode:true,
-    appToken: "xapp-1-A03QW37RM6Y-3981340034439-eb25a64c89f4c2a85d1497e8740e0c1632aad971ff96a25422f8f5daaf0dc9df" // Token from the App-level Token that we created
+    appToken: process.env.appToken // Token from the App-level Token that we created
 });
 
 (async () => {
@@ -24,7 +25,7 @@ app.command("/clean", async ({ command, ack, say, client }) => {
       // Store conversation history
         let conversationHistory;
         // ID of channel you watch to fetch the history for
-        let channelId = "C034GUBABL6";
+        let channelId = process.env.channelId;
 
         try {
         // Call the conversations.history method using WebClient
