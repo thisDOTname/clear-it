@@ -10,7 +10,7 @@ const app = new App({
     token: "xoxp-3172215028145-3161931853348-3995847437202-155a910114106c92397c50c2cbef3e6a", //Find in the Oauth  & Permissions tab
     signingSecret: "3f8391654e2e054ff2a4ff020f3bbe6e", // Find in Basic Information Tab
     socketMode:true,
-    appToken: "xapp-1-A03QW37RM6Y-3837075872550-d655e7e0a2b2aef36b143d5a86f6c493fcb5835501b9e5d0ffbae8f9cc4518c4" // Token from the App-level Token that we created
+    appToken: "xapp-1-A03QW37RM6Y-3989284356054-983e8bda1e9a11132084f15c20609495b20da999f1ecff2a8913f792bf625b15" // Token from the App-level Token that we created
 });
 
 console.log('> app : ', app);
