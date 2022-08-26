@@ -11,6 +11,10 @@ const app = new App({
 (async () => {
     await app.start();
     console.log('⚡️ Automated deployment');
+    console.log('> TOKEN : ', process.env.TOKEN);
+    console.log('> SIGNING_SECRET : ', process.env.SIGNING_SECRET);
+    console.log('> APP_TOKEN : ', process.env.APP_TOKEN);
+    console.log('> CHANNEL_ID : ', process.env.CHANNEL_ID);
     console.log('⚡️ Bolt app started');
   })();
 
