@@ -1,19 +1,16 @@
 const { App } = require("@slack/bolt");
 
 console.log('⚡️ Automated deployment');
-console.log('> TOKEN : ', typeof process.env.TOKEN, process.env.TOKEN);
-console.log('> SIGNING_SECRET : ', typeof process.env.SIGNING_SECRET, process.env.SIGNING_SECRET);
-console.log('> APP_TOKEN : ', typeof process.env.APP_TOKEN, process.env.APP_TOKEN);
-console.log('> CHANNEL_ID : ', typeof process.env.CHANNEL_ID, process.env.CHANNEL_ID);
+console.log('> TOKEN : ', 'xoxp-3172215028145-3161931853348-3995792678499-21c6797d9f9746000a06eb3841b48d7c');
+console.log('> SIGNING_SECRET : ', '3f8391654e2e054ff2a4ff020f3bbe6e');
+console.log('> APP_TOKEN : ', 'xapp-1-A03QW37RM6Y-3981340034439-eb25a64c89f4c2a85d1497e8740e0c1632aad971ff96a25422f8f5daaf0dc9df');
 
 const app = new App({
-    token: "xoxp-3172215028145-3161931853348-3995847437202-155a910114106c92397c50c2cbef3e6a", //Find in the Oauth  & Permissions tab
+    token: "xoxp-3172215028145-3161931853348-3995792678499-21c6797d9f9746000a06eb3841b48d7c", //Find in the Oauth  & Permissions tab
     signingSecret: "3f8391654e2e054ff2a4ff020f3bbe6e", // Find in Basic Information Tab
     socketMode:true,
-    appToken: "xapp-1-A03QW37RM6Y-3989284356054-983e8bda1e9a11132084f15c20609495b20da999f1ecff2a8913f792bf625b15" // Token from the App-level Token that we created
+    appToken: "xapp-1-A03QW37RM6Y-3981340034439-eb25a64c89f4c2a85d1497e8740e0c1632aad971ff96a25422f8f5daaf0dc9df" // Token from the App-level Token that we created
 });
-
-console.log('> app : ', app);
 
 (async () => {
     await app.start();
