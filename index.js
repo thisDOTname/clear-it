@@ -7,10 +7,10 @@ console.log('> APP_TOKEN : ', typeof process.env.APP_TOKEN, process.env.APP_TOKE
 console.log('> CHANNEL_ID : ', typeof process.env.CHANNEL_ID, process.env.CHANNEL_ID);
 
 const app = new App({
-    token: process.env.TOKEN, //Find in the Oauth  & Permissions tab
-    signingSecret: process.env.SIGNING_SECRET, // Find in Basic Information Tab
+    token: "xoxp-3172215028145-3161931853348-3849362926099-76960fa7a3f2d339e371e30fdb6bf6b9", //Find in the Oauth  & Permissions tab
+    signingSecret: "3f8391654e2e054ff2a4ff020f3bbe6e", // Find in Basic Information Tab
     socketMode:true,
-    appToken: process.env.APP_TOKEN // Token from the App-level Token that we created
+    appToken: "xapp-1-A03QW37RM6Y-3837075872550-d655e7e0a2b2aef36b143d5a86f6c493fcb5835501b9e5d0ffbae8f9cc4518c4" // Token from the App-level Token that we created
 });
 
 console.log('> app : ', app);
@@ -27,7 +27,7 @@ app.command("/clean", async ({ command, ack, say, client }) => {
       // Store conversation history
         let conversationHistory;
         // ID of channel you watch to fetch the history for
-        let channelId = process.env.CHANNEL_ID;
+        let channelId = "C034GUBABL6";
 
         try {
         // Call the conversations.history method using WebClient
